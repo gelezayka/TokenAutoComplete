@@ -642,7 +642,7 @@ abstract class TokenCompleteTextView<T: Any> : AppCompatAutoCompleteTextView, On
         return false
     }
 
-    override fun onEditorAction(view: TextView, action: Int, keyEvent: KeyEvent): Boolean {
+    override fun onEditorAction(view: TextView, action: Int, keyEvent: KeyEvent?): Boolean {
         if (action == EditorInfo.IME_ACTION_DONE) {
             handleDone()
             return true
